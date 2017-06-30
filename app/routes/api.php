@@ -189,7 +189,7 @@ $app->post('/api/transaction/transfer', function (Request $request, Response $re
 		$service_charge = 0;
 	} else {
 		// Check third party response
-		$json   = @file_get_contents('http://handy.travel/test/success.json');
+		$json   = @file_get_contents('CHECKING_URL');
 		$result = @json_decode($json);
 
 		if ($result->status !== 'success') {
